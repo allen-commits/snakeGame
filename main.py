@@ -1,5 +1,5 @@
 import time
-from turtle import Turtle, Screen
+from turtle import Screen
 
 from food import Food
 from scoreboard import Scoreboard
@@ -33,7 +33,7 @@ while game_is_on:
         snake.extend()
         scoreboard.increase_score()
 
-    if snake.head.xcor() > 280  or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+    if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
         scoreboard.reset()
         snake.reset()
 
@@ -41,9 +41,5 @@ while game_is_on:
         if snake.head.distance(segment) < 10:
             scoreboard.reset()
             snake.reset()
-
-
-
-
 
 screen.exitonclick()
